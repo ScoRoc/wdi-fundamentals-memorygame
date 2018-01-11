@@ -8,29 +8,42 @@
 </head>
 <body>
 	<header>
-		<h1>Memory Game</h1>
+		<a name=home><h1>Memory Game</h1></a>
 	</header>
 
 	<nav>
+		<a class="topLink" href="#top">Home</a>
 		<a class="topLink" href="#instruct">Instructions</a>
 		<a class="topLink" href="#game">Game</a>
+		<a class="topLink" id="new" href="game2.html">Color Tiles - NEW!</a>
+
 	</nav>
 
-	<!-- <h3>This game is fun.</h3>
-		<p>You should play it.</p> -->
+	<a name=instruct></a>
+	<aside id="mySidenav" class="sidenav">
+  			<a class="closebtn" onclick="closeNav()">&times;</a>
+  			<section>Send me Bitcoin (BTC) here:</section>
+  			<section class="qrWallet">1GTVbTzZgFA5CYMFttdEGdo8TxF4bER6i5</section>
+  			<section id="qrCodeHold"></section>
+		</aside>
+		<aside><a class="sideBar" id="sideTipBar" onclick="openNav()" href="#">Tip me here!</a></aside>
 
 	<main>
+		
+	<h3>Instructions</h3>
 
-		<div><a name=instruct></a></div>
-			<h3>Instructions</h3>
-			<p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.</p>
+	<a name=game><p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.</p></a>
 
-		<div><a name=game></a>
-			<img src="images/back.png" alt="Queen of Diamonds">
-			<img src="images/back.png" alt="Queen of Hearts">
-			<img src="images/back.png" alt="King of Diamonds">
-			<img src="images/back.png" alt="King of Hearts">
-		</div>
+	<p class="gameNote">Note: randomized card generation makes for a more random game, less about memory</p>
+
+	<div id="game-board" class="board clearfix"></div>
+
+	<div class="scoreBorder">
+		<h4>Score:</h4>
+		<p class="userScore" id="score">0</p>
+	</div>
+
+	<button id="reset" type="onclick">Reset Score</button>
 
 	</main>
 
@@ -49,6 +62,6 @@
 
 	</footer>
 
-	<script src="js/main.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>

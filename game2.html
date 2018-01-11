@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Tiles</title>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="css/game2style.css">
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500" rel="stylesheet">
+
+	</head>
+<body>
+
+	<header>
+		<a name=home><h1>Color Tiles</h1></a>
+	</header>
+
+	<nav>
+		<a class="topLink" href="index.html">Memory Game</a>
+		<a class="topLink" href="#instruct">Instructions</a>
+		<a class="topLink" href="#game">Game</a>
+
+
+	</nav>
+
+		<a name="instruct"></a>
+		<aside id="mySidenav" class="sidenav">
+  			<a class="closebtn" onclick="closeNav()">&times;</a>
+  			<section>Send me Bitcoin (BTC) here:</section>
+  			<section class="qrWallet">1GTVbTzZgFA5CYMFttdEGdo8TxF4bER6i5</section>
+  			<section id="qrCodeHold"></section>
+		</aside>
+		<aside><a class="sideBar" id="sideTipBar" onclick="openNav()" href="#">Tip me here!</a></aside>
+
+	<main>
+
+		<section>
+
+			<h3>Instructions</h3>
+
+
+			<p>Move your mouse around the screen to generate a fading color trail. If you like a color <span class="click">CLICK</span> it to stick it! If you no longer want that color, just <span class="click">CLICK</span> it again. If you want to generate a random color board, hit the <span class="boardButton">GENERATE RANDOM BOARD</span> button. To reset to a blank board, hit <span class="boardButton">RESET BOARD</span> .</p>
+			
+			<a name="game"></a><br>
+			<button id="randomBoardButton">Generate random board</button>
+			<button id="resetBoard">Reset board</button>
+		</section>
+
+		<section id="gameBoard"><!--
+
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+			--><div></div><!----><div></div><!----><div></div><!--
+		
+		--></section>
+	</main>
+
+	<footer class="clearfix">
+
+	<!--
+		<div class="aboutme">
+			<h5>Here's more about me</h5>
+			<a class="botLink" href="#">Facebook</a>
+			<a class="botLink" href="#">LinkedIn</a>
+		</div>
+	-->
+
+		<p class="copyright">Copyright 2017</p>
+		<p class="message">Created with &hearts; by <span class="name">SR</span></p>
+
+	</footer>
+<script type="text/javascript" src="game2.js"></script>
+</body>
+</html>

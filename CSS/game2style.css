@@ -2,6 +2,7 @@ body {
 	text-align: center;
 	background: #FFF6F2;
 	margin: 0;
+	transition: background-color .5s;
 }
 
 header {
@@ -23,13 +24,13 @@ h1 {
 nav {
 	background-color: #00A6B3;
 	color: #FFFFFF;
-	padding: 20px;
+	padding: 21px;
 	position: sticky;
 	position: -webkit-sticky;
 	top: 0;
 	z-index: 2;
 	box-shadow: 0px 7px 10px grey;
-
+	border-radius: 0px 0px 10px 10px;
 }
 
 a {
@@ -39,71 +40,72 @@ a {
 	text-decoration: none;
 }
 
+
 a:hover {
 	border-color: white;
 }
 
-main {
-	width: 850px;
-	margin: 35px auto;
-}
-
 h3 {
 	font-family: Raleway;
-	color: #0D2C40;
+	color: #565656;
 	letter-spacing: 1px;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 20px;
 	text-transform: uppercase;
+	margin-bottom: 40px;
 }
+
 
 p {
 	font-family: "Droid Serif";
 	line-height: 26px;
 	font-size: 18px;
 	color: #585858;
+	width: 900px;
+	margin: 0 auto;
 	/*width: 700px;
 	position: relative;
 	left: 75px;*/
 }
 
-img {
-	margin: 40px 8px;
-}
-
-h4 {
-	font-size: 30px;
-	color: #8C00FF;
-	display: inline-block;
-	position: relative;
-	left: -20px;
-	/*position: fixed;
-	bottom: 60px;
-	left: 23px;
-	bottom: 200px;*/
-}
-
 button {
 	cursor: pointer;
- 	background-color: #66F06C;
- 	color: rgb(60,60,60);
- 	text-transform: uppercase;
- 	font-weight: bold;
-	font-size: 20px;
- 	padding: 10px 10px;
- 	border-radius: 7px;
- 	position: relative;
- 	left: 70px;
+	background-color: #B7F2DF;
+	color: #BE42FF;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Orbitron', sans-serif;
+	border-radius: 6px;
+	text-transform: uppercase;
+	padding: 9px 6px;
 }
 
-h5 {
-	font-family: Raleway;
-	letter-spacing: 5px;
-	font-weight: 600;
-	font-size: 14px;
-	text-transform: uppercase;
-	font-style: italic;
+button:focus, button:hover, button:active {
+	background-color: #BE42FF;
+	color: #B7F2DF;
 }
+
+main {
+	margin: 20px 0;
+}
+
+section {
+	margin: 20px 0;
+}
+
+div{
+	display: inline-block;
+	width: 35px;
+	height: 50px;
+	background-color: #FFF6F2;
+	vertical-align: top;
+}
+
+/*
+div:hover {
+	background-color: red;
+}
+*/
 
 footer {
 	padding: 0 20px;
@@ -115,30 +117,9 @@ footer {
 	text-transform: uppercase;
 }
 
-/*
-.topLink {
-	font-family: Raleway;
-	letter-spacing: 1px;
-	font-weight: 600;
-	font-size: 18px;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-.botLink {
-	font-family: Raleway;
-	color: #F15B31;
-	letter-spacing: 1px;
-	font-weight: 700;
-	font-size: 12px;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-*/
-
 .sidenav {
 	height: 200px;
-	width: 0px;
+	width: 0;
 	position: fixed;
 	z-index: 3;
 	top: 149px;
@@ -163,7 +144,7 @@ footer {
 }
 
 .sidenav a:hover {
-	color: #81ff81;
+	color: #8fff81;
 	border-bottom: 2px solid transparent;
 }
 
@@ -173,6 +154,7 @@ footer {
 	left: -25px;
 	font-size: 36px;
 	margin-right: 50px;
+
 }
 
 .sidenav section {
@@ -180,20 +162,22 @@ footer {
 	font-family: "Raleway";
 	font-weight: bold;
 	margin-left: 15px;
+
 }
 
 .qrWallet {
 	font-family: "Raleway";
 	font-weight: normal;
 	font-size: 11px;
-	margin-bottom: 0px;
 	margin-left: 15px;
+
 }
 
 .sidenav img {
 	height: 140px;
 	width: 140px;
-	margin: 0px;
+	overflow-x: hidden;
+
 }
 
 .sideBar {
@@ -225,27 +209,50 @@ footer {
 	cursor: pointer;
 }
 
-.cursor {
-	cursor: pointer;
+.click {
+	background-color: #E0DCDC;
+	color: #E86554;
+	font-weight: 500;
+	font-size: 13px;
+	font-family: 'Orbitron', sans-serif;
+	border-radius: 3px;
+	text-transform: uppercase;
+	padding: 3px 2px;
+	box-shadow: 0px 0px 2px 1px rgba(30,30,30,.9) inset;
 }
 
-.gameNote {
-	font-family: Raleway;
-	font-size: 13px;
-	color: black;
-	margin: 0;
+.boardButton {
+	background-color: #B7F2DF;
+	color: #BE42FF;
+	font-weight: 500;
+	font-size: 12px;
+	font-family: 'Orbitron', sans-serif;
+	border-radius: 4px;
+	box-shadow: 2px 3px 3px rgba(80,80,80,.7);
+	text-transform: uppercase;
+	padding: 4px 3px;
+	opacity: .9
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity 650ms linear;
 }
 
 .copyright {
 	font-family: Raleway;
 	float: left;
 	color: white;
+	width: 170px;
+	margin: 20px auto;
 	/*position: relative;*/
 }
 
 .message {
 	font-family: Raleway;
 	float: right;
+	width: 235px;
+	margin: 20px auto;
 	/*position: relative;*/
 	color: white;
 
@@ -265,32 +272,11 @@ height: 0;
 font-size: 0;
 }
 
-.scoreBorder {
-	border: solid 2px rgba(0,79,1,.7);
-	border-radius: 10px;
-	width: 220px;
-	position: relative;
-	left: -60px;
-	display: inline-block;
+#gameBoard {
+	border: 3px solid rgba(125,44,168,.5);
+	border-radius: 7px;
 }
 
-.userScore {
-	display: inline-block;
-	color: #FF3D00;
-	font-size: 30px;
-	position: relative;
-	left: 12px;
-}
-
-#new {
-	border: 1px solid rgba(255,255,255,.8);
-	border-radius: 4px;
-	padding: 1px;
-	text-decoration: none;
-}
-
-#new:hover {
-	color: #AB3BE5;
-	border: 1px solid #00A6B3;
-	border-bottom: 2px solid white;
+div[data-id="solid"] {
+	opacity: 1;
 }
